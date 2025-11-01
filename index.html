@@ -387,7 +387,7 @@
                 </div>
                 <div class="card">
                     <h3><span class="card-icon">3</span>Implementing Holistic, Context-Specific Models</h3>
-                    <p>Moving decisively away from models inherited from the Global North, Afrocentric literacy frameworks emphasise culturally embedded strategies that promote higher-order thinking, including critical evaluation and problem identification within African realities.</p>
+                    <p>Rather than positioning Afrocentric literacy as a departure from Global North models, we advocate for a re-centering of African epistemologies within the curriculum. This approach foregrounds culturally embedded strategies that promote higher-order thinking—such as critical evaluation and problem identification—rooted in African realities. At the same time, it maintains a global orientation to knowledge production, enabling learners to engage dialogically across diverse intellectual traditions.</p>
                     <img src="https://raw.githubusercontent.com/oeybers-cpu/AL_critical-thinking/main/Forum.png" alt="Academic forum discussion" class="card-image">
                 </div>
             </div>
@@ -457,11 +457,11 @@
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId.startsWith('#')) {
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
+                // Skip smooth scrolling for external links (like the home link)
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
                         window.scrollTo({
                             top: targetElement.offsetTop - 100,
                             behavior: 'smooth'
