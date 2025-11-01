@@ -443,7 +443,7 @@
                 </div>
                 <div class="card">
                     <h3><span class="card-icon">3</span>Implementing Holistic, Context-Specific Models</h3>
-                    <p>Moving decisively beyond models inherited from the Global North, Afrocentric literacy frameworks advocate for an integrated epistemic approach—one that weaves together indigenous knowledge systems, global intellectual traditions, and culturally embedded strategies. This synthesis fosters higher-order thinking by enabling learners to critically evaluate, interrogate, and reframe dominant paradigms through the lens of African realities and plural epistemologies.</p>
+                    <p>Moving decisively away from models inherited from the Global North, Afrocentric literacy frameworks emphasise culturally embedded strategies that promote higher-order thinking, including critical evaluation and problem identification within African realities.</p>
                     <img src="https://raw.githubusercontent.com/oeybers-cpu/AL_critical-thinking/main/Forum.png" alt="Academic forum discussion" class="card-image">
                 </div>
             </div>
@@ -455,10 +455,12 @@
                 <div class="card">
                     <h3><span class="card-icon">A</span>Explicit Teaching of Critical Dispositions</h3>
                     <p>Strategic implementation of argumentation, inquiry-based learning, and dialogic approaches enables students to develop the questioning behaviours and intellectual scepticism essential for rigorous academic engagement.</p>
+                    <img src="https://raw.githubusercontent.com/oeybers-cpu/AL_critical-thinking/main/scientists.png" alt="Scientists collaborating" class="card-image">
                 </div>
                 <div class="card">
                     <h3><span class="card-icon">B</span>Cultivating Collaborative, Dialogic Learning Environments</h3>
                     <p>Fostering dialogue, structured debate, and substantive peer interaction promotes critical reflection, particularly when learners receive scaffolding to articulate, defend, and refine their intellectual positions.</p>
+                    <img src="https://raw.githubusercontent.com/oeybers-cpu/AL_critical-thinking/main/chemists.png" alt="Chemists in discussion" class="card-image">
                 </div>
                 <div class="card">
                     <h3><span class="card-icon">C</span>Implementing Critical Pedagogies Inspired by Freire</h3>
@@ -524,3 +526,25 @@
                 }
             });
         });
+
+        // Show/hide top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const topButton = document.getElementById('topButton');
+            if (window.scrollY > 300) {
+                topButton.style.display = 'flex';
+            } else {
+                topButton.style.display = 'none';
+            }
+        });
+
+        // Scroll to top when top button is clicked
+        document.getElementById('topButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
