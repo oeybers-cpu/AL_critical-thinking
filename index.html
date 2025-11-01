@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Literacy and Critical Thinking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             -webkit-locale: "en";
@@ -206,6 +207,8 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -236,6 +239,16 @@
         .card p {
             color: var(--text-gray);
             line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .card-image, .card-video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .strategic-approaches .card {
@@ -322,6 +335,43 @@
             line-height: 1.6;
         }
 
+        .top-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            z-index: 100;
+        }
+
+        .top-button:hover {
+            transform: translateY(-5px);
+        }
+
+        .home-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .home-link:hover {
+            color: var(--lighter-accent);
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -355,6 +405,7 @@
             </div>
             <nav>
                 <ul>
+                    <li><a href="https://oeybers-cpu.github.io/a_lit_models/" class="home-link"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="#strategic">Strategic Approaches</a></li>
                     <li><a href="#pedagogical">Pedagogical Strategies</a></li>
                     <li><a href="#structural">Structural Challenges</a></li>
@@ -366,83 +417,131 @@
 
     <main>
         <section class="hero">
-            <h1>Academic Literacy and Critical Thinking in Africa</h1>
-            <p>Fostering skills beyond basic language proficiency to enable students to evaluate, analyze, and challenge knowledge critically</p>
+            <h1>Transforming Higher Education Through Critical Academic Literacy</h1>
+            <p>Moving beyond technical, neutral models to foster transformative intellectual engagement in African universities</p>
         </section>
 
         <section class="intro">
-            <p><span class="highlight">Academic literacy development</span> in Africa can significantly facilitate critical thinking by fostering skills beyond basic language proficiency, enabling students to evaluate, analyze, and challenge knowledge critically.</p>
+            <p><span class="highlight">Academic literacy development</span> in African higher education must transcend basic language proficiency to cultivate critical thinkers who can rigorously evaluate, analyse, and challenge established knowledge systems. We advocate for a paradigm shift towards transformative literacy practices.</p>
         </section>
 
         <section id="strategic" class="strategic-approaches">
-            <h2 class="section-title">Strategic Approaches to Promote Critical Thinking</h2>
+            <h2 class="section-title">Strategic Approaches to Cultivate Critical Thinking</h2>
             <div class="cards-container">
                 <div class="card">
-                    <h3><span class="card-icon">1</span>Developing Reasoning Skills</h3>
-                    <p>Academic literacy should aim at cultivating deep reasoning, argumentation, conceptual analysis, and problem-solving abilities, which transform students from mere consumers of knowledge to active interrogators of ideas.</p>
+                    <h3><span class="card-icon">1</span>Developing Advanced Reasoning Capabilities</h3>
+                    <p>Academic literacy programmes should prioritise cultivating sophisticated reasoning, complex argumentation, conceptual analysis, and innovative problem-solving abilities. These competencies transform students from passive knowledge recipients to active interrogators of disciplinary assumptions and methodologies.</p>
+                    <video class="card-video" controls>
+                        <source src="https://github.com/oeybers-cpu/AL_critical-thinking/raw/refs/heads/main/20251101_0956_New%20Video_simple_compose_01k8z6pp31etpvpvjtght8m8h7.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="card">
-                    <h3><span class="card-icon">2</span>Incorporating Indigenous Languages and Epistemologies</h3>
-                    <p>An Afrocentric, inclusive approach that integrates local knowledge systems encourages critical reflection on cultural contexts, making learning more relevant and empowering learners to critique dominant discourses.</p>
+                    <h3><span class="card-icon">2</span>Integrating Indigenous Languages and Epistemologies</h3>
+                    <p>An Afrocentric, inclusive approach that systematically integrates local knowledge systems encourages critical reflection on cultural contexts, making learning more relevant and empowering learners to deconstruct and challenge dominant academic discourses.</p>
                 </div>
                 <div class="card">
-                    <h3><span class="card-icon">3</span>Holistic and Context-Specific Models</h3>
-                    <p>Moving away from models inherited from the Global North, Afrocentric literacy frameworks emphasize culturally embedded strategies that promote higher-order thinking, including critical evaluation and problem identification within local realities.</p>
+                    <h3><span class="card-icon">3</span>Implementing Holistic, Context-Specific Models</h3>
+                    <p>Moving decisively away from models inherited from the Global North, Afrocentric literacy frameworks emphasise culturally embedded strategies that promote higher-order thinking, including critical evaluation and problem identification within African realities.</p>
+                    <img src="https://raw.githubusercontent.com/oeybers-cpu/AL_critical-thinking/main/1761983145.png" alt="Holistic education model" class="card-image">
                 </div>
             </div>
         </section>
 
         <section id="pedagogical" class="pedagogical-strategies">
-            <h2 class="section-title">Pedagogical Strategies</h2>
+            <h2 class="section-title">Transformative Pedagogical Strategies</h2>
             <div class="cards-container">
                 <div class="card">
-                    <h3><span class="card-icon">A</span>Explicit Teaching of Critical Skills</h3>
-                    <p>Strategies such as argumentation, inquiry-based learning, and dialogic approaches enable students to develop questioning behaviors essential for critical engagement.</p>
+                    <h3><span class="card-icon">A</span>Explicit Teaching of Critical Dispositions</h3>
+                    <p>Strategic implementation of argumentation, inquiry-based learning, and dialogic approaches enables students to develop the questioning behaviours and intellectual scepticism essential for rigorous academic engagement.</p>
                 </div>
                 <div class="card">
-                    <h3><span class="card-icon">B</span>Creating Collaborative and Dialogic Classroom Environments</h3>
-                    <p>Encouraging dialogue, debate, and peer interaction fosters critical reflection, especially when learners are supported to articulate and defend their ideas.</p>
+                    <h3><span class="card-icon">B</span>Cultivating Collaborative, Dialogic Learning Environments</h3>
+                    <p>Fostering dialogue, structured debate, and substantive peer interaction promotes critical reflection, particularly when learners receive scaffolding to articulate, defend, and refine their intellectual positions.</p>
                 </div>
                 <div class="card">
-                    <h3><span class="card-icon">C</span>Use of Inquiry Tools and Pedagogies Inspired by Freire</h3>
-                    <p>Dialogic classrooms that provide tools for reflection and dialogue help learners understand societal contradictions and develop a critical consciousness.</p>
+                    <h3><span class="card-icon">C</span>Implementing Critical Pedagogies Inspired by Freire</h3>
+                    <p>Dialogic classrooms equipped with tools for critical reflection help learners recognise and analyse societal contradictions, developing the critical consciousness necessary for transformative intellectual development.</p>
+                    <img src="https://raw.githubusercontent.com/oeybers-cpu/AL_critical-thinking/main/lecture%20youth.png" alt="Critical pedagogy in practice" class="card-image">
                 </div>
             </div>
         </section>
 
         <section id="structural" class="structural-challenges">
-            <h2 class="section-title">Addressing Structural Challenges</h2>
+            <h2 class="section-title">Addressing Structural Challenges in Higher Education</h2>
             <div class="cards-container">
                 <div class="card">
                     <h3><span class="card-icon">I</span>Curriculum Responsiveness and Assessment Reform</h3>
-                    <p>To develop critical thinking, curricula must be sensitive to African socio-cultural realities, and assessments should evaluate higher-order thinking skills explicitly.</p>
+                    <p>To genuinely develop critical thinking, curricula must demonstrate sensitivity to African socio-cultural realities, and assessments must explicitly evaluate higher-order thinking skills rather than mere content reproduction.</p>
                 </div>
                 <div class="card">
                     <h3><span class="card-icon">II</span>Embedding Literacy Development Within Disciplinary Contexts</h3>
-                    <p>Discipline-specific approaches that integrate critical literacy principles ensure learners can critically navigate specific fields of knowledge, thus promoting analytical engagement.</p>
+                    <p>Discipline-specific approaches that integrate critical literacy principles ensure learners can navigate and challenge the epistemological foundations of their fields, promoting authentic analytical engagement.</p>
                 </div>
             </div>
         </section>
 
         <section id="outcomes" class="practical-outcomes">
-            <h2 class="section-title">Practical Outcomes</h2>
+            <h2 class="section-title">Transformative Outcomes for African Higher Education</h2>
             <div class="outcomes-container">
-                <p>Students with enhanced academic literacy are better equipped to question infallible disciplinary knowledge, challenge inequalities, and contribute meaningfully to societal transformation.</p>
-                <p>Emphasizing indigenous epistemologies and critical pedagogy encourages learners to see their realities critically, fostering agency and social change.</p>
+                <p>Students with enhanced critical academic literacy are better equipped to question supposedly infallible disciplinary knowledge, challenge structural inequalities within knowledge production, and contribute meaningfully to societal transformation.</p>
+                <p>Emphasising indigenous epistemologies and critical pedagogy encourages learners to analyse their realities through multiple lenses, fostering intellectual agency and capacity for social innovation.</p>
             </div>
         </section>
 
         <section class="summary">
-            <h2>In Summary</h2>
-            <p>African academic literacy development promotes critical thinking by embedding indigenous epistemologies, employing dialogic pedagogies, and reforming curricula and assessments to foster higher-order reasoning and socio-cultural awareness.</p>
+            <h2>Our Call to Action</h2>
+            <p>African academic literacy development must prioritise critical thinking by embedding indigenous epistemologies, employing dialogic pedagogies, and fundamentally reforming curricula and assessments to foster higher-order reasoning and socio-cultural awareness. We urge higher education leaders, policymakers, and practitioners to move beyond technical, decontextualised literacy models towards transformative approaches that empower African intellectuals to reshape knowledge landscapes.</p>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">Academic Literacy & Critical Thinking</div>
-            <p class="footer-text">Promoting critical thinking through academic literacy development in African educational contexts.</p>
+            <p class="footer-text">Advancing transformative higher education through critical academic literacy development in African contexts.</p>
         </div>
     </footer>
+
+    <a href="#" class="top-button" id="topButton">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Show/hide top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const topButton = document.getElementById('topButton');
+            if (window.scrollY > 300) {
+                topButton.style.display = 'flex';
+            } else {
+                topButton.style.display = 'none';
+            }
+        });
+
+        // Scroll to top when top button is clicked
+        document.getElementById('topButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
